@@ -8,7 +8,7 @@ part 'og_image.g.dart';
 class OGImage implements OGMedia, OGDisplayable {
   /// Image url
   @override
-  final String url;
+  final String? url;
 
   /// Image secure url
   @override
