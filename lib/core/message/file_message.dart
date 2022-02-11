@@ -128,6 +128,12 @@ class FileMessage extends BaseMessage {
       json['name'] = file['name'];
       json['data'] = file['data'];
     }
+
+    (json['thumbnails'] as List<dynamic>?)?.forEach((element) {
+      if (element.runtimeType == String) {
+        json['thumbnails'] = null;
+      }
+    });
     return _$FileMessageFromJson(json);
   }
 
